@@ -20,6 +20,8 @@ storage_accounts_cfg = get_storage_accounts()
 # 3. Create storage accounts 
 storage_accounts = create_storage_accounts(resource_groups, storage_accounts_cfg, primary_rg_name)
 
+# export the output
+
 pulumi.export("resourceGroups", [rg.name for rg in resource_groups.values()])
 pulumi.export("primaryResourceGroup", primary_rg_name)
 pulumi.export("storageAccounts", [sa.name for sa in storage_accounts])
