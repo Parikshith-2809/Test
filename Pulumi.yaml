@@ -1,0 +1,11 @@
+name: pulumi-azure
+description: FTT infrastructure as code version 1
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-python

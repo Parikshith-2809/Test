@@ -1,0 +1,15 @@
+config:
+  pulumi-azure:resourceGroups:
+    - name: "rg-dev-main"
+      location: "EastUS"
+    - name: "rg-dev-analytics"
+      location: "WestEurope"
+
+  pulumi-azure:primaryResourceGroupName: "rg-dev-main"
+
+  pulumi-azure:storageAccounts:
+    - name: "devsa02pulumi"
+      sku: "Standard_LRS"
+    - name: "devsa03pulumi"
+      sku: "Standard_LRS"
+      resourceGroup: "rg-dev-analytics"
